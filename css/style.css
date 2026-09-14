@@ -60,8 +60,8 @@ button{cursor:pointer}
 .floating-card{position:absolute;z-index:5;min-width:130px;padding:16px;}
 .floating-card small{color:var(--gold-dark);font-size:.6rem}
 .floating-card p{margin-top:8px;font-family:var(--serif);font-size:1.15rem;line-height:1}
-.card-one{top:5%;left:5%;transform:rotate(-30deg); animation:rotate 15s linear infinite}
-.card-two{right:2%;bottom:30%;transform:rotate(-45deg); animation:rotate 15s linear infinite}
+.card-one{top:5%;left:10%;transform:rotate(-30deg); animation:rotate 15s linear infinite}
+.card-two{right:-3%;bottom:30%;transform:rotate(-45deg); animation:rotate 15s linear infinite}
 .circle-text{position:absolute;top:10%;right:-30px;width:120px;height:120px;display:grid;place-items:center;border:1px solid var(--gold);border-radius:50%;color:var(--gold-dark);font-size:.55rem;letter-spacing:.1em;animation:rotate 15s linear infinite}
 @keyframes rotate{to{transform:rotate(360deg)}}
 .hero-scroll{position:absolute;bottom:30px;left:4%;display:flex;align-items:center;gap:15px;font-size:.6rem;letter-spacing:.15em}
@@ -454,7 +454,10 @@ button{cursor:pointer}
     .navbar{min-height:72px}.brand img{width:45px;height:45px}.brand{font-size:1rem}
     .hero{padding-top:100px}.hero h1{font-size:3.3rem}.hero-description{font-size:.9rem}
     .hero-buttons{flex-direction:column}.btn{width:100%}.hero-visual{min-height:380px}.hero-image-wrapper{height:400px}
-    .floating-card{display:none}.statement{padding:90px 0}
+    /* .floating-card{display:none}.statement{padding:90px 0} */
+    .floating-card img{
+        width: 70px;
+    }
     .statement h2,.section-heading h2,.customize-content h2,.about-content h2,.community h2{font-size:3rem}
     .footer-links{gap:35px}.footer-bottom{flex-direction:column;gap:10px}
 }
