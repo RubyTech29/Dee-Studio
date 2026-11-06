@@ -74,9 +74,9 @@ if (heroVisual && heroImage && window.matchMedia("(pointer:fine)").matches) {
 }
 
 /* Contact / WhatsApp configuration */
-const whatsappNumber = "234XXXXXXXXXX"; // Replace with digits only, including country code.
+const whatsappNumber = "pyrxu4"; // Replace with digits only, including country code.
 const whatsappMessage = "Hello Dee's Studio! I would like to make an enquiry about your custom products.";
-const whatsappGroupLink = "https://chat.whatsapp.com/YOUR_GROUP_LINK";
+const whatsappGroupLink = "https://t.me/dees_studio";
 
 function openWhatsApp(event) {
     event.preventDefault();
@@ -84,37 +84,35 @@ function openWhatsApp(event) {
         alert("Please add the Dee's Studio WhatsApp number in js/main.js.");
         return;
     }
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank", "noopener");
+    window.open(`https://wa.link/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank", "noopener");
 }
 document.getElementById("whatsappChat")?.addEventListener("click", openWhatsApp);
 document.getElementById("contactWhatsApp")?.addEventListener("click", openWhatsApp);
 
 document.getElementById("whatsappGroup")?.addEventListener("click", event => {
     event.preventDefault();
-    if (whatsappGroupLink.includes("YOUR_GROUP_LINK")) {
-        alert("Please add the Dee's Studio WhatsApp group link in js/main.js.");
-        return;
+    if (whatsappGroupLink.includes("https://t.me/dees_studio")) {
+       
     }
     window.open(whatsappGroupLink, "_blank", "noopener");
 });
 
-/* Product catalogue data. Replace sample prices, names and image paths with confirmed stock. */
 const fashionProducts = [
-    {id:1,name:"Black Face Cap",category:"Embroidery",price:3500,description:"A premium embroidery design.",image:"images/fearless1.jpg"},
-    {id:2,name:"Black Face Cap",category:"Embroidery",price:2500,description:"A premium embroidery design.",image:"images/fearless2.jpg"},
-    {id:3,name:"Burgundy Face Cap",category:"Embroidery",price:1800,description:"A premium embroidery design.",image:"images/fearless3.jpg"},
-    {id:4,name:"NavyBlue Face Cap",category:"Embroidery",price:2200,description:"A premium embroidery design.",image:"images/fearless4.jpg"},
-    {id:5,name:"Brown Face Cap",category:"Embroidery",price:1500,description:"A premium embroidery design.",image:"images/fearless5.jpg"},
-    {id:6,name:"Pink Face Cap",category:"Embroidery",price:1600,description:"A premium embroidery design.",image:"images/fearless6.jpg"}
+    {id:1,name:"Black Face Cap",category:"Embroidery",price:900,description:"A premium embroidery design.",image:"images/fearless1.jpg"},
+    {id:2,name:"Black Face Cap",category:"Embroidery",price:900,description:"A premium embroidery design.",image:"images/fearless2.jpg"},
+    {id:3,name:"Burgundy Face Cap",category:"Embroidery",price:900,description:"A premium embroidery design.",image:"images/fearless3.jpg"},
+    {id:4,name:"NavyBlue Face Cap",category:"Embroidery",price:900,description:"A premium embroidery design.",image:"images/fearless4.jpg"},
+    {id:5,name:"Brown Face Cap",category:"Embroidery",price:900,description:"A premium embroidery design.",image:"images/fearless5.jpg"},
+    {id:6,name:"Pink Face Cap",category:"Embroidery",price:900,description:"A premium embroidery design.",image:"images/fearless6.jpg"}
 ];
 
 const giftProducts = [
     {id:101,name:"A",category:"Embroidery",price:1000,description:"An elegant.",image:"images/Unwavering9.jpg"},
-    {id:102,name:"B",category:"Embroidery",price:1200,description:"A thoughtful.",image:"images/unwavering7.jpg"},
-    {id:103,name:"C",category:"Embroidery",price:900,description:"A keepsake.",image:"images/unwavering3.jpg"},
-    {id:104,name:"D",category:"Embroidery",price:1400,description:"A personalised.",image:"images/unwavering4.jpg"},
+    {id:102,name:"B",category:"Embroidery",price:1200,description:"A thoughtful.",image:"images/Unwavering7.jpg"},
+    {id:103,name:"C",category:"Embroidery",price:900,description:"A keepsake.",image:"images/Unwavering3.jpg"},
+    {id:104,name:"D",category:"Embroidery",price:1400,description:"A personalised.",image:"images/Unwavering4.jpg"},
     {id:105,name:"E",category:"Embroidery",price:650,description:"A special.",image:"images/Unwavering15.png"},
-    {id:106,name:"F",category:"Embroidery",price:1100,description:"A Customised.",image:"images/unwavering6.jpg"}
+    {id:106,name:"F",category:"Embroidery",price:1100,description:"A Customised.",image:"images/Unwavering6.jpg"}
 ];
 
 const money = amount => new Intl.NumberFormat("en-NG", {
@@ -260,7 +258,6 @@ reviewDots?.addEventListener("click", event => {
 window.addEventListener("resize", updateReviews);
 updateReviews();
 
-/* Custom enquiry form: opens a prepared email until a server/email service is connected. */
 document.getElementById("customForm")?.addEventListener("submit", event => {
     event.preventDefault();
     const name = document.getElementById("name").value.trim();
