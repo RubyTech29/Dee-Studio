@@ -109,11 +109,11 @@ const fashionProducts = [
 ];
 
 const giftProducts = [
-    {id:101,name:"A",category:"Embroidery",price:1000,description:"An elegant.",image:"images/unwavering1.jpg"},
-    {id:102,name:"B",category:"Embroidery",price:1200,description:"A thoughtful.",image:"images/unwavering2.jpg"},
+    {id:101,name:"A",category:"Embroidery",price:1000,description:"An elegant.",image:"images/Unwavering9.jpg"},
+    {id:102,name:"B",category:"Embroidery",price:1200,description:"A thoughtful.",image:"images/unwavering7.jpg"},
     {id:103,name:"C",category:"Embroidery",price:900,description:"A keepsake.",image:"images/unwavering3.jpg"},
     {id:104,name:"D",category:"Embroidery",price:1400,description:"A personalised.",image:"images/unwavering4.jpg"},
-    {id:105,name:"E",category:"Embroidery",price:650,description:"A special.",image:"images/Unwavering15.jpg"},
+    {id:105,name:"E",category:"Embroidery",price:650,description:"A special.",image:"images/Unwavering15.png"},
     {id:106,name:"F",category:"Embroidery",price:1100,description:"A Customised.",image:"images/unwavering6.jpg"}
 ];
 
