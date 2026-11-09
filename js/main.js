@@ -221,8 +221,8 @@ const giftProducts = [
     defaultColor: "Burgundy",
     variations: [
         { name: "Blue",    image: "images/Unwavering8.jpg"},
-        { name: "Light Blue",    image: "images/Unwavering12.png"},
-        { name: "Brown",    image: "images/Unwavering17.png"},
+        { name: "Burgundy",    image: "images/Unwavering6.jpg"},
+        { name: "Brown",    image: "images/Unwavering.png"},
     ] },
 
     { id: 103, 
@@ -234,8 +234,8 @@ const giftProducts = [
     defaultColor: "Butter Yellow",
     variations: [
         { name: "Blue",    image: "images/Unwavering5.jpg"},
-        { name: "Light Blue",    image: "images/Unwavering12.png"},
-        { name: "Brown",    image: "images/Unwavering4.png"},
+        { name: "Purple",    image: "images/Unwavering20.jpg"},
+        { name: "Brown",    image: "images/Unwavering4.jpg"},
     ] },
 
     { id: 104, 
@@ -260,8 +260,8 @@ const giftProducts = [
     defaultColor: "Butter Yellow",
     variations: [
         { name: "Blue",    image: "images/Unwavering11.png"},
-        { name: "Burgundy",    image: "images/Unwavering.png"},
-        { name: "Brown",    image: "images/Unwavering.png"},
+        { name: "Burgundy",    image: "images/Unwavering18.jpg"},
+        { name: "Brown",    image: "images/Unwavering19.png"},
     ] },
 
     { id: 106, 
@@ -272,7 +272,6 @@ const giftProducts = [
     image: "images/Unwavering2.jpg",
     defaultColor: "Peach",
     variations: [
-        { name: "Peach 2",    image: "images/Unwavering.jpg"},
     ] }
 ];
 
