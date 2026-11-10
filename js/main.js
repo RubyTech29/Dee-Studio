@@ -202,7 +202,7 @@ const giftProducts = [
         name: "God is with me embroidered hoodie", 
     category: "Embroidery", 
     price: 2600, 
-    description: "Fashionable and Trendy", 
+    description: "Fashionable and Trendy(Also available in other colours)", 
     image: "images/Unwavering9.jpg", 
     defaultColor: "Pink",
     variations: [
@@ -216,25 +216,25 @@ const giftProducts = [
         name: "Faith on Full Volume Hoodie", 
     category: "Embroidery", 
     price: 2600, 
-    description: "Pattern - Stylish", 
+    description: "Pattern - Stylish(Also available in other colours)", 
     image: "images/Unwavering7.jpg", 
-    defaultColor: "Burgundy",
+    defaultColor: "Brown",
     variations: [
         { name: "Blue",    image: "images/Unwavering8.jpg"},
         { name: "Burgundy",    image: "images/Unwavering6.jpg"},
-        { name: "Brown",    image: "images/Unwavering.png"},
+        { name: "",    image: "images/Unwavering.jpg"},
     ] },
 
     { id: 103, 
         name: "P.U.F.N.", 
     category: "Embroidery", 
     price: 2600, 
-    description: "A keepsake.", 
-    image: "images/Unwavering3.jpg", 
-    defaultColor: "Butter Yellow",
+    description: "A keepsake.(Also available in other colours)", 
+    image: "images/Unwavering20.jpg", 
+    defaultColor: "Purple",
     variations: [
         { name: "Blue",    image: "images/Unwavering5.jpg"},
-        { name: "Purple",    image: "images/Unwavering20.jpg"},
+        { name: "Butter Yellow",    image: "images/Unwavering3.jpg"},
         { name: "Brown",    image: "images/Unwavering4.jpg"},
     ] },
 
@@ -242,11 +242,11 @@ const giftProducts = [
         name: "Busy becoming HER", 
     category: "Embroidery", 
     price: 2600, 
-    description: "Elegant.", 
-    image: "images/Unwaverin16.png", 
-    defaultColor: "Sky Blue",
+    description: "Elegant.(Also available in other colours)", 
+    image: "images/Unwavering14.jpg", 
+    defaultColor: "Brown",
     variations: [
-        { name: "Brown",    image: "images/Unwavering14.jpg"},
+        { name: "Sky Blue",    image: "images/Unwaverin16.png"},
         { name: "Burgundy",    image: "images/Unwavering13.png"},
         { name: "Butter Yellow",    image: "images/Unwavering15.png"},
     ] },
@@ -255,29 +255,29 @@ const giftProducts = [
         name: "There Is More...", 
     category: "Embroidery", 
     price: 2600, 
-    description: "Special = Classic", 
-    image: "images/Unwavering1.png",
-    defaultColor: "Butter Yellow",
+    description: "Special - Classic (Also available in other colours)", 
+    image: "images/Unwavering18.jpg",
+    defaultColor: "Burgundy",
     variations: [
         { name: "Blue",    image: "images/Unwavering11.png"},
-        { name: "Burgundy",    image: "images/Unwavering18.jpg"},
+        { name: "Butter Yellow",    image: "images/Unwavering1.png"},
         { name: "Brown",    image: "images/Unwavering19.png"},
     ] },
 
     { id: 106, 
-        name: "The Name Above All Names", 
+        name: "YHWH", 
     category: "Embroidery", 
     price: 2600, 
-    description: "Premium Design", 
+    description: "Embroidered Hoodie with a cross detail on the sleeve (Also available in other colours)", 
     image: "images/Unwavering2.jpg",
     defaultColor: "Peach",
     variations: [
     ] }
 ];
 
-const money = amount => new Intl.NumberFormat("en-NG", {
+const money = amount => new Intl.NumberFormat("ru-RU", {
     style: "currency",
-    currency: "NGN",
+    currency: "RUB",
     maximumFractionDigits: 0
 }).format(amount);
 
@@ -303,7 +303,7 @@ function productCard(product) {
             <h3>${escapeHTML(product.name)}</h3>
             <p>${escapeHTML(product.description)}</p>
             <strong class="product-price">${money(product.price)}</strong>
-            <button class="buy-now" type="button" data-product-id="${product.id}">Buy Now <span>↗</span></button>
+            <button class="buy-now" type="button" data-product-id="${product.id}">View More <span>↗</span></button>
         </div>
     </article>`;
 }
