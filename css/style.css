@@ -461,7 +461,9 @@ button{cursor:pointer}
 @media(max-width:480px){
     .navbar{min-height:72px}.brand img{width:45px;height:45px}.brand{font-size:1rem}
     .hero{padding-top:100px}.hero h1{font-size:3.3rem}.hero-description{font-size:.9rem}
-    .hero-buttons{flex-direction:column}.btn{width:100%}.hero-visual{min-height:380px}.hero-image-wrapper{height:400px}
+    .hero-buttons{flex-direction:column}
+    .btn{width:100%}
+    .hero-visual{min-height:380px}.hero-image-wrapper{height:400px}
     /* .floating-card{display:none}.statement{padding:90px 0} */
     .floating-card img{
         width: 70px;

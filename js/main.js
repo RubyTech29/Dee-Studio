@@ -139,10 +139,10 @@ const fashionProducts = [
         defaultColor: "Black",
         variations: [
             { name: "Black", image: "images/fearless2.jpg" },
-            { name: "Burgundy", image: "images/fearless3.jpg" },
-            { name: "Navy Blue", image: "images/fearless4.jpg" },
-            { name: "Brown", image: "images/fearless5.jpg" },
-            { name: "Pink", image: "images/fearless6.jpg" }
+            // { name: "Burgundy", image: "images/fearless3.jpg" },
+            // { name: "Navy Blue", image: "images/fearless4.jpg" },
+            // { name: "Brown", image: "images/fearless5.jpg" },
+            // { name: "Pink", image: "images/fearless6.jpg" }
         ]
      },
     // {
@@ -155,46 +155,46 @@ const fashionProducts = [
     //     defaultColor: "Black",
     //     variations: []
     // },
-    // {
-    //     id: 3,
-    //     name: "Burgundy Face Cap",
-    //     category: "Embroidery",
-    //     price: 900,
-    //     description: "A premium embroidery design.",
-    //     image: "images/fearless3.jpg",
-    //     defaultColor: "Burgundy",
-    //     variations: []
-    // },
-    // {
-    //     id: 4,
-    //     name: "Navy Blue Face Cap",
-    //     category: "Embroidery",
-    //     price: 900,
-    //     description: "A premium embroidery design.",
-    //     image: "images/fearless4.jpg",
-    //     defaultColor: "Navy Blue",
-    //     variations: []
-    // },
-    // {
-    //     id: 5,
-    //     name: "Brown Face Cap",
-    //     category: "Embroidery",
-    //     price: 900,
-    //     description: "A premium embroidery design.",
-    //     image: "images/fearless5.jpg",
-    //     defaultColor: "Brown",
-    //     variations: []
-    // },
-    // {
-    //     id: 6,
-    //     name: "Pink Face Cap",
-    //     category: "Embroidery",
-    //     price: 900,
-    //     description: "A premium embroidery design.",
-    //     image: "images/fearless6.jpg",
-    //     defaultColor: "Pink",
-    //     variations: []
-    // }
+    {
+        id: 3,
+        name: "Face Cap",
+        category: "Embroidery",
+        price: 900,
+        description: "A premium embroidery design.",
+        image: "images/fearless3.jpg",
+        defaultColor: "Burgundy",
+        variations: []
+    },
+    {
+        id: 4,
+        name: "Face Cap",
+        category: "Embroidery",
+        price: 900,
+        description: "A premium embroidery design.",
+        image: "images/fearless4.jpg",
+        defaultColor: "Navy Blue",
+        variations: []
+    },
+    {
+        id: 5,
+        name: "Face Cap",
+        category: "Embroidery",
+        price: 900,
+        description: "A premium embroidery design.",
+        image: "images/fearless5.jpg",
+        defaultColor: "Brown",
+        variations: []
+    },
+    {
+        id: 6,
+        name: "Cap",
+        category: "Embroidery",
+        price: 900,
+        description: "A premium embroidery design.",
+        image: "images/fearless6.jpg",
+        defaultColor: "Pink",
+        variations: []
+    }
 ];
 
 const giftProducts = [
