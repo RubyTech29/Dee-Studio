@@ -267,11 +267,14 @@ const giftProducts = [
     { id: 106, 
         name: "YHWH", 
     category: "Embroidery", 
-    price: 2600, 
+    price: 2800, 
     description: "Embroidered Hoodie with a cross detail on the sleeve (Also available in other colours)", 
     image: "images/Unwavering2.jpg",
     defaultColor: "Peach",
     variations: [
+        { name: "Brown",    image: "images/Unwavering22.png"},
+        { name: "Burgundy",    image: "images/Unwavering23.png"},
+        { name: "Blue",    image: "images/Unwavering24.png"},
     ] }
 ];
 
