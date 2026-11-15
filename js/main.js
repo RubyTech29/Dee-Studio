@@ -217,12 +217,12 @@ const giftProducts = [
     category: "Embroidery", 
     price: 2600, 
     description: "Pattern - Stylish(Also available in other colours)", 
-    image: "images/Unwavering7.jpg", 
-    defaultColor: "Brown",
+    image: "images/Unwavering21.jpg", 
+    defaultColor: "Peach",
     variations: [
         { name: "Blue",    image: "images/Unwavering8.jpg"},
         { name: "Burgundy",    image: "images/Unwavering6.jpg"},
-        { name: "",    image: "images/Unwavering.jpg"},
+        { name: "Brown",    image: "images/Unwavering7.jpg"},
     ] },
 
     { id: 103, 
