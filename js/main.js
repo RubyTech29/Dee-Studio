@@ -56,6 +56,14 @@ mobileMenu?.querySelectorAll("a").forEach(link => {
     });
 });
 
+document.addEventListener("click", event => {
+    if (!mobileMenu?.classList.contains("open")) return;
+    if (mobileMenu.contains(event.target) || menuButton?.contains(event.target)) return;
+    mobileMenu.classList.remove("open");
+    document.body.classList.remove("menu-open");
+    menuButton?.setAttribute("aria-expanded", "false");
+});
+
 const currentYear = document.getElementById("currentYear");
 if (currentYear) currentYear.textContent = new Date().getFullYear();
 
@@ -214,7 +222,7 @@ const giftProducts = [
 
     { id: 102, 
         name: "Faith on Full Volume Hoodie", 
-    category: "Embroidery", 
+    category: "DFT Printing", 
     price: 2600, 
     description: "Pattern - Stylish(Also available in other colours)", 
     image: "images/Unwavering21.jpg", 
@@ -227,7 +235,7 @@ const giftProducts = [
 
     { id: 103, 
         name: "P.U.F.N.", 
-    category: "Embroidery", 
+    category: "DFT Printing", 
     price: 2400, 
     description: "A keepsake.(Also available in other colours)", 
     image: "images/Unwavering20.jpg", 
@@ -242,7 +250,7 @@ const giftProducts = [
         name: "Busy becoming HER", 
     category: "Embroidery", 
     price: 2500, 
-    description: "Elegant.(Also available in other colours)", 
+    description: "Elegant Sweartshirts.(Also available in other colours)", 
     image: "images/Unwavering14.jpg", 
     defaultColor: "Brown",
     variations: [
@@ -265,6 +273,54 @@ const giftProducts = [
     ] },
 
     { id: 106, 
+        name: "YHWH", 
+    category: "Embroidery", 
+    price: 2800, 
+    description: "Embroidered Hoodie with a cross detail on the sleeve (Also available in other colours)", 
+    image: "images/Unwavering2.jpg",
+    defaultColor: "Peach",
+    variations: [
+        { name: "Brown",    image: "images/Unwavering22.png"},
+        { name: "Burgundy",    image: "images/Unwavering23.png"},
+        { name: "Blue",    image: "images/Unwavering24.png"},
+    ] },
+    { id: 107, 
+        name: "Busy becoming HER", 
+        category: "Embroidery", 
+        price: 2800, 
+        description: "Elegant Hoodie.(Also available in other colours)", 
+        image: "images/Unwavering26.png", 
+        defaultColor: "Brown",
+        variations: [
+            { name: "Sky Blue",    image: "images/Unwavering25.png"},
+            { name: "Burgundy",    image: "images/Unwavering27.png"},
+            { name: "Butter Yellow",    image: "images/Unwavering28.png"},
+    ] },
+    { id: 108, 
+        name: "YHWH", 
+    category: "Embroidery", 
+    price: 2800, 
+    description: "Embroidered Hoodie with a cross detail on the sleeve (Also available in other colours)", 
+    image: "images/Unwavering2.jpg",
+    defaultColor: "Peach",
+    variations: [
+        { name: "Brown",    image: "images/Unwavering22.png"},
+        { name: "Burgundy",    image: "images/Unwavering23.png"},
+        { name: "Blue",    image: "images/Unwavering24.png"},
+    ] },
+    { id: 109, 
+        name: "YHWH", 
+    category: "Embroidery", 
+    price: 2800, 
+    description: "Embroidered Hoodie with a cross detail on the sleeve (Also available in other colours)", 
+    image: "images/Unwavering2.jpg",
+    defaultColor: "Peach",
+    variations: [
+        { name: "Brown",    image: "images/Unwavering22.png"},
+        { name: "Burgundy",    image: "images/Unwavering23.png"},
+        { name: "Blue",    image: "images/Unwavering24.png"},
+    ] },
+    { id: 110, 
         name: "YHWH", 
     category: "Embroidery", 
     price: 2800, 
@@ -408,6 +464,7 @@ function openOrderModal(product) {
     const customisation = document.getElementById("customisation");
     const leaveCustom = document.getElementById("leaveCustom");
     const quantity = document.getElementById("orderQuantity");
+    const deliveryPoint = document.getElementById("customerDeliveryPoint");
     const status = document.getElementById("orderStatus");
     if (customisation) {
         customisation.value = "";
@@ -415,6 +472,7 @@ function openOrderModal(product) {
     }
     if (leaveCustom) leaveCustom.checked = false;
     if (quantity) quantity.value = "1";
+    if (deliveryPoint) deliveryPoint.value = "";
     if (status) status.textContent = "";
     updateOrderSummary();
 
@@ -499,7 +557,8 @@ orderForm?.addEventListener("submit", async event => {
         name: document.getElementById("customerName")?.value.trim() || "",
         contact: document.getElementById("customerContact")?.value.trim() || "",
         email: document.getElementById("customerEmail")?.value.trim() || "",
-        address: document.getElementById("customerAddress")?.value.trim() || ""
+        address: document.getElementById("customerAddress")?.value.trim() || "",
+        deliveryPoint: document.getElementById("customerDeliveryPoint")?.value.trim() || ""
     };
 
     const quantity = Math.max(1, Number(document.getElementById("orderQuantity")?.value || 1));
@@ -541,6 +600,7 @@ orderForm?.addEventListener("submit", async event => {
             customer_email: customer.email,
             reply_to: customer.email,
             delivery_address: customer.address,
+            delivery_point: customer.deliveryPoint,
             order_summary: `${currentProduct.name}${colourSuffix} — ${money(currentProduct.price)} × ${quantity} = ${money(productTotal)}`
         };
 
@@ -580,6 +640,7 @@ function setupProductCarousel(key, products, trackId) {
 
     track.innerHTML = products.map(productCard).join("");
     if (count) count.textContent = products.length;
+    track.setAttribute("aria-live", "polite");
     let index = 0;
 
     const visible = () => window.innerWidth <= 700 ? 1 : window.innerWidth <= 1000 ? 2 : 3;

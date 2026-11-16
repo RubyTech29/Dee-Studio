@@ -698,3 +698,55 @@ button{cursor:pointer}
     .order-variations-heading { align-items: flex-start; }
 }
 
+
+
+/* Fix hero button hit-area and mobile tap behaviour */
+.hero-circle {
+    pointer-events: none;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content,
+.hero-buttons {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-buttons .btn {
+    position: relative;
+    z-index: 4;
+    pointer-events: auto;
+    touch-action: manipulation;
+}
+
+@media (max-width: 700px) {
+    .hero-buttons {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        min-height: 54px;
+        width: min(100%, 360px);
+        margin-inline: auto;
+    }
+
+    .mobile-menu {
+        z-index: 1001;
+        max-height: calc(100vh - 84px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-track,
+    .mobile-menu,
+    .hero-buttons .btn {
+        transition-duration: 0.01ms !important;
+    }
+}
